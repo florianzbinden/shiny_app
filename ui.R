@@ -57,7 +57,7 @@ Examination value is recalled below the graph as well as the calculated Agricult
        
 
          h6("by Florian Z, link to code in", a("Github", 
-                                     href="http://github.com/florianzbinden"))         
+                                     href="https://github.com/florianzbinden/shiny_app"))         
    
 )  
 )
