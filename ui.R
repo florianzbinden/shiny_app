@@ -9,18 +9,21 @@ shinyUI(
     
     headerPanel("Swiss dataset"),
     sidebarPanel(
-        sliderInput('Examination', 'Guess at the Agriculture by sliding Examination', value = 15, min = 0, max = 35, step = 1,)
-    ),
-    
+        sliderInput('Examination', 'Guess at the Agriculture by sliding Examination', value = 15, min = 0, max = 35, step = 1,),   
+   h4("As Examination, you entered"),
+   verbatimTextOutput("Examination"),
+   h4("The regression fit calculated an Agriculture value of"),
+   verbatimTextOutput("Agriculture"),
+   
+   
+   h6("by Florian Z, link to code in", a("Github", 
+                                         href="https://github.com/florianzbinden/shiny_app"))    
+   
+   ),    
     mainPanel(
       h3("Vizualisation of the swiss dataset"),
       h5("Graphically, the Examination predictor can be represented against the Agriculture"),
-        plotOutput('p2'),
-        h4("As Examination, you entered"),
-        verbatimTextOutput("Examination"),
-        h4("The regression fit calculated an Agriculture value of"),
-        verbatimTextOutput("Agriculture")
-        
+        plotOutput('p2') 
     )
 )),
 
@@ -53,11 +56,9 @@ is computed in order to give the Agriculture value. The red line on the graph sh
 Examination value is recalled below the graph as well as the calculated Agriculture value.
               It seems logical that the more educated the people are, the less likely 
               they are to work in the agriculture field, even in 1888.")
-         ) ,
+         ) 
        
-
-         h6("by Florian Z, link to code in", a("Github", 
-                                     href="https://github.com/florianzbinden/shiny_app"))         
+     
    
 )  
 )
